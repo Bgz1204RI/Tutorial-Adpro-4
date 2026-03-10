@@ -19,7 +19,7 @@ public class Order {
         this.author = author;
         this.status = OrderStatus.WAITING_PAYMENT.getValue();
 
-        if (products.isEmpty()) {
+        if (products == null || products.isEmpty()) {
             throw new IllegalArgumentException();
         } else {
             this.products = products;

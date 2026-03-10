@@ -17,8 +17,7 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public Order createOrder(Order order) {
         if (orderRepository.findById(order.getId()) == null) {
-            orderRepository.save(order);
-            return order;
+            return orderRepository.save(order);
         }
         return null;
     }
